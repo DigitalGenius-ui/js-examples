@@ -1,0 +1,190 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.style.active{
+    animation: animation 400ms ease-in-out;
+}
+
+@keyframes animation{
+    from{
+        transform: translateY(18px);
+    }to{
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.style{
+    padding: 1rem;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 16rem;
+    margin-top: 1rem;
+}
+
+.calculater{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.calculater .calc{
+    margin-top: 1rem;
+    padding: 0.8rem 0.2rem;
+    outline: none;
+}
+
+.btns{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.3rem;
+}
+.btns input{
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.indicate{
+    position: fixed;
+    bottom: 0;
+    background-color:red;
+    left: 0;
+    height: 10px;
+}
+
+.btnss{
+    margin: 3rem 0;
+}
+
+.btnss span{
+    padding: 1rem;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.contain{
+    margin: 0.5rem 3rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    display: none;
+}
+
+#box1{
+    background-color: aqua;
+}
+#box2{
+    background-color:aquamarine;
+}
+#box3{
+    background-color:violet;
+}
+#box4{
+    background-color:tomato;
+}
+
+.range{
+    width: 90%;
+}
+
+#rangeValue{
+    width: 100%;
+    background-color: aquamarine;
+    appearance: none;
+    border-radius: 50px;
+    padding: 0.2em 0;
+}
+
+#rangeValue::-webkit-slider-thumb{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    appearance: none;
+    border-radius: 50px;
+}
+
+.images{
+    width: 500px;
+    height: 450px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.photo{
+    display: flex;
+    transform: translateX(0px);
+    transition: 400ms ease-in-out;
+}
+
+.photo img{
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.arrows{
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.palindrome, .password{
+    margin-top: 2rem;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    width: 25rem;
+}
+.palindrome input, .password .pass-input{
+    width: 80%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 170, 255);
+    padding: 1rem 0.2rem;
+}
+
+.palindrome button, .password button{
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 0.5rem; 
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.palindrome p{
+    text-align: center;
+}
+
+.palindrome p span{
+    text-transform: uppercase;
+}
+
+.pass-input{
+    user-select: none;
+}
+
+.notification{
+    position: fixed;
+    bottom: 2rem;
+    left: 4rem;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.361);
+    padding: 0 1rem;
+    border-left: 10px solid green;
+    transform: translateY(8rem);
+    transition: 0.5s ease-in-out;
+}
+
+.notification.active{
+    transform: translateY(0);
+    transition: 0.5s ease-in-out;
+}
